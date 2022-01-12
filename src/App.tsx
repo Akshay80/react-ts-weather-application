@@ -17,9 +17,9 @@ const App: FC = () => {
   const alertMsg = useSelector((state: RootState) => state.alert.message);
 
   return (
-    <div className="has-text-centered">
+    <div className="has-text-centered" style={{background: 'url(https://wallpapersmug.com/download/1920x1080/7a22c5/forest_mountains_sunset_cool_weather_minimalism.jpg)', backgroundSize: "cover", height:'100vh'}}>
       <Search title="Enter city name and press search button" />
-      {loading ? <h2 className="is-size-3 py-2">Loading...</h2> : weatherData && <Weather data={weatherData} />}
+      {loading ? <h2 className="is-size-3 has-text-light py-2">Loading...</h2> : weatherData && <Weather data={weatherData} />}
 
       {alertMsg && <Alert message={alertMsg} onClose={() => dispatch(setAlert(''))} />}
       {error && <Alert message={error} onClose={() => dispatch(setError())} />}
