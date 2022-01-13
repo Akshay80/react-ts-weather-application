@@ -1,6 +1,5 @@
 import React, { FC, useState, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import './css/Search.css';
 import { setAlert } from '../store/actions/alertActions';
 import { getWeather, setLoading } from '../store/actions/weatherActions';
 import Typist  from 'react-typist';
